@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HPBD Miland</title>
+        <link rel="icon" href="./assets/img/logo.png">
+        <meta charset="UTF-8">
+        <link rel = "stylesheet" href="./assets/css/style.css" />
+        <link rel ="stylesheet" href="./assets/icon-font/themify-icons/themify-icons.css"/>
+    </head>
+
+    <body onload="play()">
+      
+      <script>
+        x=2
+        function play() {
+          x+=1
+          var music = document.getElementById("music")
+          music.classList.toggle("musicOff")
+          console.log(x)
+          var audio = document.getElementById("audio");
+          if (x%2 == 0)
+            {audio.play();}
+          else {audio.pause()}
+        }
+      </script>
+      
+        <icon id="music" class="music ti-music" type="button" value="PLAY" onclick="play()" loop="true"></icon>
+        <audio id="audio" src="./assets/music/y2mate.com - Jeremy Zucker  comethru Official Video.mp3"></audio>  <!--add autoplay -->
+    
+        <div class="birthdayCard">          
+            <div class="cardFront">
+              <div class="front-text">
+              <h3 class="happy">HAPPY</h3>
+              <h2 class="bday">BIRTHDAY</h2> 
+              <h3 class="toyou">Mai Lan!</h3>  
+              </div>
+
+              <div class="wrap-deco">
+            <div class="decorations"></div>
+            <div class="decorationsTwo"></div>
+                
+              </div> 
+                <div class="wrap-decoTwo">
+            <div class="decorations"></div>
+            <div class="decorationsThree"></div>
+              </div>
+              <div class="plate">
+                <div class="cake"></div>
+                <div class="flame"></div>
+              </div>
+            </div>
+              
+              <div class="cardInside">
+                  <div class="inside-text">
+              <h3 class="happy">HAPPY</h3>
+              <h2 class="bday">BIRTHDAY</h2> 
+              <h3 class="toyou">to you!</h3>  
+              </div>
+                <div class="wishes">
+           
+                  <div class=" text-typing"><p>A wish for you on your birthday, whatever you ask may you receive, whatever you seek may you find, whatever you wish may it be fulfilled on your birthday and always. Happy birthday!</p></div>
+                <p class="name">Yu</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="border-img"><img id="img" src="./assets/img/confetti.png"></div>
+      
+      <script src="https://www.wpromotions.eu/confetti.min.js"></script>
+      <script>confetti.start()</script>
+      <script>setTimeout(function(){confetti.stop();},3000)</script>
+      <script src="./main.js"></script>
+    </body>
+</html>
